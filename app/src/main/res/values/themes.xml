@@ -1,32 +1,38 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.Fridalauncher" parent="Theme.Material3.Dark.NoActionBar">
-        <!-- 2025 Modern Theme -->
         <item name="colorPrimary">@color/blue_primary</item>
         <item name="colorPrimaryVariant">@color/blue_dark</item>
         <item name="colorOnPrimary">@color/black</item>
-        
+
         <item name="colorSecondary">@color/green_primary</item>
         <item name="colorSecondaryVariant">@color/green_dark</item>
         <item name="colorOnSecondary">@color/black</item>
-        
+
+        <item name="colorTertiary">@color/purple_primary</item>
+        <item name="colorOnTertiary">@color/text_on_dark</item>
+
         <item name="android:colorBackground">@color/background</item>
         <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
         <item name="colorOnSurface">@color/text_primary</item>
-        
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
         <item name="android:textColorPrimary">@color/text_primary</item>
         <item name="android:textColorSecondary">@color/text_secondary</item>
         <item name="android:textColorHint">@color/text_hint</item>
-        
+
         <item name="android:statusBarColor">@color/background</item>
         <item name="android:navigationBarColor">@color/background</item>
         <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+
+        <item name="colorError">@color/red_primary</item>
+        <item name="colorOnError">@color/text_on_dark</item>
     </style>
 
     <style name="Theme.Fridalauncher" parent="Base.Theme.Fridalauncher" />
-    
-    <!-- Dialog theme for the expanded About section -->
-    <style name="Theme.Fridalauncher.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+
+    <style name="Theme.Fridalauncher.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
         <item name="colorPrimary">@color/blue_primary</item>
         <item name="colorSurface">@color/surface</item>
         <item name="colorOnSurface">@color/text_primary</item>
@@ -35,5 +41,11 @@
         <item name="android:textColorSecondary">@color/text_secondary</item>
         <item name="buttonBarPositiveButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
         <item name="buttonBarNegativeButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.FridaLauncher.Dialog</item>
+    </style>
+
+    <style name="ShapeAppearance.FridaLauncher.Dialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
     </style>
 </resources>

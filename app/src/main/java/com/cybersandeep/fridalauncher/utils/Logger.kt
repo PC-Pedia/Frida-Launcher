@@ -2,9 +2,6 @@ package com.cybersandeep.fridalauncher.utils
 
 import android.util.Log
 
-/**
- * Simple logging utility class
- */
 object Logger {
     private const val TAG = "FridaLauncher"
 

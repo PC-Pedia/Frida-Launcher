@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="surface">#1C1B1F</color>
-    <color name="surface_variant">#49454F</color>
-    <color name="background">#121212</color>
-    <color name="card_background">#2D2D2D</color>
-    
-    <color name="blue_primary">#2196F3</color>
-    <color name="blue_dark">#1976D2</color>
-    <color name="green_primary">#4CAF50</color>
-    <color name="green_dark">#388E3C</color>
-    <color name="red_primary">#F44336</color>
-    <color name="orange_primary">#FF9800</color>
-    <color name="purple_primary">#673AB7</color>
-    
-    <color name="text_primary">#E0E0E0</color>
-    <color name="text_secondary">#B0B0B0</color>
-    <color name="text_hint">#909090</color>
-    <color name="text_on_primary">#FFFFFF</color>
-    
-    <color name="terminal_background">#1A1A1A</color>
-    <color name="terminal_text">#BBDEFB</color>
 
-    
-    <color name="divider">#3C3C3C</color>
-    <color name="card_stroke">#3C3C3C</color>
+    <color name="surface">#0D0D10</color>
+    <color name="surface_variant">#18181D</color>
+    <color name="background">#040406</color>
+    <color name="card_background">#121216</color>
+
+    <color name="blue_primary">#00E5FF</color>
+    <color name="blue_dark">#00B8D4</color>
+    <color name="blue_light">#18FFFF</color>
+
+    <color name="green_primary">#00E676</color>
+    <color name="green_dark">#00C853</color>
+    <color name="red_primary">#FF5252</color>
+    <color name="red_dark">#D50000</color>
+    <color name="orange_primary">#FFAB00</color>
+    <color name="orange_dark">#FF6D00</color>
+    <color name="purple_primary">#B388FF</color>
+    <color name="purple_dark">#7C4DFF</color>
+
+    <color name="text_primary">#F5F5F7</color>
+    <color name="text_secondary">#9E9EA8</color>
+    <color name="text_hint">#5C5C66</color>
+    <color name="text_on_primary">#000000</color>
+    <color name="text_on_dark">#FFFFFF</color>
+
+    <color name="terminal_background">#08080A</color>
+    <color name="terminal_text">#00E5FF</color>
+
+    <color name="divider">#1E1E24</color>
+    <color name="card_stroke">#1E1E24</color>
+    <color name="card_stroke_accent">#00E5FF</color>
+
+    <color name="status_success">#00E676</color>
+    <color name="status_error">#FF5252</color>
+    <color name="status_warning">#FFAB00</color>
+    <color name="status_info">#00E5FF</color>
 </resources>

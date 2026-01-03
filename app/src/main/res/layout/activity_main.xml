@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/surface"
-        app:elevation="4dp">
+        app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -21,8 +21,11 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/surface"
             app:title="Frida Launcher"
+            app:subtitle="v2.0"
             app:titleTextAppearance="@style/TextAppearance.FridaLauncher.Headline"
-            app:titleTextColor="@color/blue_primary" />
+            app:subtitleTextAppearance="@style/TextAppearance.FridaLauncher.Caption"
+            app:titleTextColor="@color/blue_primary"
+            app:subtitleTextColor="@color/text_secondary" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -41,7 +44,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-
+            <!-- Device Status Card -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/statusCardView"
                 android:layout_width="0dp"
@@ -56,11 +59,20 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Device Status"
-                        android:textAppearance="@style/TextAppearance.FridaLauncher.Subtitle" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="📱 Device Status"
+                            android:textAppearance="@style/TextAppearance.FridaLauncher.Subtitle" />
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,7 +99,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="12dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -110,13 +122,13 @@
                         android:id="@+id/versionTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="12dp"
                         android:text="Version: Not installed"
                         android:textAppearance="@style/TextAppearance.FridaLauncher.Body" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-
+            <!-- Version Selection Card -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/versionCardView"
                 android:layout_width="0dp"
@@ -135,26 +147,26 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Version Selection"
+                        android:text="⬇️ Version Selection"
                         android:textAppearance="@style/TextAppearance.FridaLauncher.Subtitle" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="Select a Frida server version to install:"
+                        android:text="Select a Frida server version or enter custom:"
                         android:textAppearance="@style/TextAppearance.FridaLauncher.Body" />
                             
                     <Spinner
                         android:id="@+id/versionSpinner"
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="12dp"
                         android:layout_marginBottom="16dp"
                         android:background="@drawable/spinner_background"
                         android:dropDownWidth="match_parent"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
                         android:popupBackground="@color/surface"
                         android:spinnerMode="dropdown" />
 
@@ -187,7 +199,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-
+            <!-- Server Controls Card -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/controlCardView"
                 android:layout_width="0dp"
@@ -206,7 +218,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Server Controls"
+                        android:text="🎮 Server Controls"
                         android:textAppearance="@style/TextAppearance.FridaLauncher.Subtitle" />
 
                     <LinearLayout
@@ -248,7 +260,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="12dp"
                             android:orientation="horizontal">
 
                             <com.google.android.material.button.MaterialButton
@@ -278,13 +290,13 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-
+            <!-- Logs Card -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/logCardView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:minHeight="200dp"
+                android:minHeight="220dp"
                 style="@style/Widget.FridaLauncher.Card"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -298,13 +310,14 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
                         
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Logs"
+                            android:text="📋 Logs"
                             android:textAppearance="@style/TextAppearance.FridaLauncher.Subtitle" />
                             
                         <com.google.android.material.button.MaterialButton
@@ -316,7 +329,7 @@
                             android:textColor="@color/blue_primary"
                             android:textSize="12sp"
                             app:icon="@android:drawable/ic_menu_save"
-                            app:iconSize="16dp"
+                            app:iconSize="14dp"
                             app:iconTint="@color/blue_primary" />
                             
                         <com.google.android.material.button.MaterialButton
@@ -328,16 +341,15 @@
                             android:textColor="@color/red_primary"
                             android:textSize="12sp"
                             app:icon="@android:drawable/ic_menu_close_clear_cancel"
-                            app:iconSize="16dp"
+                            app:iconSize="14dp"
                             app:iconTint="@color/red_primary" />
                     </LinearLayout>
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:background="@color/terminal_background"
-                        android:padding="2dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/terminal_background"
                         android:minHeight="200dp">
 
                         <HorizontalScrollView
@@ -358,7 +370,7 @@
                                     android:id="@+id/statusMessageTextView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:padding="12dp"
+                                    android:padding="16dp"
                                     android:scrollbars="vertical|horizontal"
                                     android:text="Ready"
                                     android:textIsSelectable="true"
@@ -382,24 +394,41 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
-
+    <!-- Loading Overlay -->
     <FrameLayout
         android:id="@+id/loadingOverlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#80000000"
+        android:background="#CC000000"
         android:clickable="true"
         android:focusable="true"
         android:visibility="gone">
 
-        <com.google.android.material.progressindicator.CircularProgressIndicator
-            android:id="@+id/progressBar"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:indeterminate="true"
-            app:indicatorColor="@color/blue_primary"
-            app:trackColor="@color/surface_variant" />
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                app:indicatorColor="@color/blue_primary"
+                app:trackColor="@color/surface_variant"
+                app:indicatorSize="56dp"
+                app:trackThickness="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Please wait..."
+                android:textAppearance="@style/TextAppearance.FridaLauncher.Body"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
     </FrameLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

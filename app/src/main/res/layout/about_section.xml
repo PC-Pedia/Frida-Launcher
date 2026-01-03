@@ -18,8 +18,8 @@
         android:id="@+id/aboutCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="1dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
         app:cardBackgroundColor="@color/card_background"
         app:strokeColor="@color/card_stroke"
         app:strokeWidth="1dp"
@@ -31,14 +31,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingVertical="12dp"
-            android:paddingHorizontal="16dp"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="18dp"
             android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="About"
+                android:text="ℹ️ About"
                 android:textSize="14sp"
                 android:textAppearance="?attr/textAppearanceSubtitle2"
                 android:textColor="@color/text_primary" />
@@ -59,10 +59,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="v1.2"
+                android:text="v2.0"
                 android:textSize="14sp"
                 android:textAppearance="?attr/textAppearanceCaption"
-                android:textColor="@color/text_secondary" />
+                android:textColor="@color/blue_primary" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

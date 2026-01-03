@@ -19,7 +19,7 @@
 ## 📋 Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
-- [What's New in v12](#whats-new-in-v12)
+- [What's New in v2.0](#whats-new-in-v20)
 - [Screenshots](#screenshots)
 - [Demo](#demo)
 - [Requirements](#requirements)
@@ -57,17 +57,23 @@ Say goodbye to:
 
 - **Device Insights:** Detects your device architecture (e.g., `arm64`) and Frida status (installed/running).
 - **Version Picker:** Choose from available Frida server versions in-app.
+- **Custom Version Input:** Enter any Frida version number to install older versions (e.g., 16.7.19).
 - **One-Tap Install:** Automatically downloads and sets up the right binary.
 - **Easy Controls:** Start, stop, uninstall, or refresh with a single tap.
+- **Reliable Stop:** Uses aggressive kill methods (`kill -9`) to ensure server stops reliably.
 - **Live Logging:** View real-time Frida server logs with copy/clear options.
+- **Custom Flags:** Run Frida server with custom arguments for advanced use cases.
 
 ---
 
-## What's New in v12
+## What's New in v2.0
 
-- 🎨 **Modernized UI** with polished icon.
-- ⚙️ **Custom Arguments Support** for flexible Frida server tweaks.
-- ⚡ **Snappier Performance** with optimized log handling.
+- 🎨 **Completely Redesigned UI** with modern Material 3 design and vibrant cyan/purple color scheme.
+- 📦 **Custom Version Input** - Now you can enter ANY Frida version number (e.g., 16.7.19) to install older versions that aren't in the dropdown list.
+- 🛑 **Improved Server Stop** - Fixed the issue where Frida server sometimes wouldn't stop. Now uses `kill -9` with multiple fallback methods for reliable termination.
+- ⚡ **Better Performance** with optimized code and smoother animations.
+- 🔧 **Enhanced Error Handling** with clearer log messages.
+- 📱 **Future-Proof** - Updated for Android 14/15 compatibility (2026 ready).
 
 ---
 
@@ -105,16 +111,22 @@ Say goodbye to:
 - **USB Debugging:** Enabled
 - **Internet Connection:** Required for downloading Frida binaries
 - **Root Access:** Mandatory
-- **Superuser Manager App:** Installed (e.g., Magisk, Built from Source
+- **Superuser Manager App:** Installed (e.g., Magisk, SuperSU)
+
+---
+
+## Installation
+
+### From Releases
+Download the latest APK from the [Releases](https://github.com/thecybersandeep/Frida-Launcher/releases) page.
+
+### Build from Source
 ```bash
-# Clone the repo
 git clone https://github.com/thecybersandeep/Frida-Launcher
 cd Frida-Launcher
 
-# Build APK
 ./gradlew clean assembleDebug
 
-# Or install directly
 ./gradlew installDebug
 ```
 
@@ -127,10 +139,11 @@ cd Frida-Launcher
 1. Launch **Frida Launcher**.
 2. Grant **Storage** and **Root (su)** permissions via your Superuser Manager app.
 3. Tap **Refresh** to check Frida server status.
-4. Select a Frida version and tap **Install**.
-5. Hit **Start** to run the server.
-6. Use **Stop** or **Uninstall** as needed.
-7. Monitor real-time logs in the **Logs Panel**.
+4. Select a Frida version from the dropdown, or select **"Custom Version..."** to enter any version number (e.g., 16.7.19 for older versions).
+5. Tap **Install** to download and install.
+6. Hit **Start** to run the server, or use **Custom** to start with custom flags.
+7. Use **Stop** or **Uninstall** as needed.
+8. Monitor real-time logs in the **Logs Panel**.
 
 ---
 
@@ -153,7 +166,7 @@ Frida Launcher streamlines Frida server management with smart automation. Here's
 - Buttons (Start, Stop, Uninstall) activate only when relevant.
 - **Install** unlocks after selecting a version.
 - **Start** enables post-installation.
-- **Stop** activates only when the server is running.
+- **Stop** shows a helpful prompt if server isn't running.
 - The UI **auto-refreshes** after actions like Stop or Uninstall to keep status accurate.
 
 All actions are designed to prevent errors and ensure seamless server management.
